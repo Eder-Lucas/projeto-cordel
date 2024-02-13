@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+:root {
+    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-titulo: 'Passion One', arial, sans-serif, serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding: 50px;
+    font-family: var(--fonte-titulo);
+    font-variant: small-caps;
+    font-size: 4em;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+div#biblioteca > h1 {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: 600;
+}
+
+main {
+    background-color: transparent;
+    height: 100%;
+    box-shadow: inset 0px 6px 20px 8px rgb(0, 0, 0);
+}
+
+section {
+    margin: auto;
+    text-align: center;
+}
+
+section p {
+    padding: 25px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+section a {
+    padding: 25px 0px;
+    color: white;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+section#milton {
+    position: relative;
+    background: blue url('../imagens/background004.jpg') center center no-repeat fixed;
+    background-size: cover;
+    height: 60vh;
+    margin-bottom: 40vh;
+}
+
+section#chico {
+    position: relative;
+    background: green url('../imagens/background005.jpg') center center no-repeat fixed;
+    background-size: cover;
+    height: 75vh;
+    margin-bottom: 40vh;
+}
+
+section#ira {
+    position: relative;
+    background: green url('../imagens/background006.jpg') center center no-repeat fixed;
+    background-size: cover;
+    height: 75vh;
+    margin-bottom: 40vh;
+}
+
+section#ascenso {
+    position: relative;
+    background: green url('../imagens/background007.jpg') center center no-repeat fixed;
+    background-size: cover;
+    height: 75vh;
+    margin-bottom: 40vh;
+}
+
+article.center-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.694);
+    transition: 0.5s;
+}
+
+article.center-text:hover {
+    background-color: black;
+    border-radius: 10px;
+}
+
+footer {
+    height: 300px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-variant: small-caps;
+    background-color: black;
+}
+
+footer p {
+    padding-top: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+footer li {
+    padding-top: 10px;
+}
+
+footer li a {
+    padding: 10px;
+}
+
+footer a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a::after {
+    content: '\00A0\🔗';
+}
+

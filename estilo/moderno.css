@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Gochi+Hand & display=swap');
+
+:root {
+    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-titulo: 'Passion One', cursive, sans-serif;
+    --fonte-cordel: 'Gochi Hand', cursive, verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: var(--fonte-padrao);
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-family: var(--fonte-titulo);
+    font-size: 4em;
+    font-variant: small-caps;/* TODAS AS LETRAS MAIUSCULAS MAS AS PRIMEIRAS LETRAS SÃO MAIORES */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;/* 10% DE TUDO QUE VC VÊ */
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    font-family: var(--fonte-cordel);
+    font-size: 3.5vw;/* DEPENDENDO DA LARGURA ELE SE ADAPTA */
+    line-height: 2em;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.471);
+}
+
+section.imagem > p {
+    display: inline-block;/* VIRA UM BLOCO ADAPTAVEL */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.677);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
