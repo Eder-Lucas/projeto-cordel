@@ -3,78 +3,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
 :root {
+    /* FONTES */
     --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
     --fonte-titulo: 'Passion One', arial, sans-serif, serif;
+
+    /* CORES */
+    --rosita: #ff4564;
+    --verdito: #22ff00;
 }
 
-* {
+* {/* PARA TER 100% DO HTML */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html, body {/* DECLARADO UMA FONTE BASE */
     font-family: var(--fonte-padrao);
 }
 
 header {
     background-color: black;
-    color: white;
     text-align: center;
 }
 
 header > h1 {
     padding: 50px;
+    color: white;
     font-family: var(--fonte-titulo);
-    font-variant: small-caps;
+    font-variant: small-caps;/* LETRA MAIUSCULA MAIOR QUE TODAS AS LETRAS */
     font-size: 4em;
 }
 
-header > p {
-    padding-bottom: 50px;
-}
-
-div#biblioteca > h1 {
+div#biblioteca h1 {
     padding: 30px;
+    color: black;
     background-color: white;
     text-align: center;
     font-variant: small-caps;
     font-weight: 600;
-}
-
-main {
-    background-color: transparent;
-    height: 100%;
-    box-shadow: inset 0px 6px 20px 8px rgb(0, 0, 0);
+    text-shadow: 6px 1px 4px #00000027;
 }
 
 section {
-    margin: auto;
     text-align: center;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.471);
 }
 
-section p {
+section p {/* TODO PARAGRAFO DO SECTION */
     padding: 25px;
     font-weight: bolder;
     font-variant: small-caps;
 }
 
-section a {
-    padding: 25px 0px;
+section a {/* TODO LINK  DO  SECTION */
+    padding: 25px 0px;/* AREA DE CLICK MAIOR */
     color: white;
     text-decoration: none;
 }
 
-section a:hover {
+section a:hover {/* MOUSE EM CIMA */
     text-decoration: underline;
 }
 
+section a:active {/* QUANDO CLICA */
+    color: #ff4564;
+}
+
+section a:visited {/* QUANDO JÁ FOI VISITADO */
+    color: #22ff00;
+}
+
 section#milton {
-    position: relative;
-    background: blue url('../imagens/background004.jpg') center center no-repeat fixed;
+    position: relative;/* PARA CENTRALIZAÇÃO VERTICAL */
+    background: red url('../imagens/background004.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
-    margin-bottom: 40vh;
+    margin-bottom: 40vh;/* ESPAÇAMENTO PARA EFEITO PARALLAX */
 }
 
 section#chico {
@@ -87,7 +92,7 @@ section#chico {
 
 section#ira {
     position: relative;
-    background: green url('../imagens/background006.jpg') center center no-repeat fixed;
+    background: brown url('../imagens/background006.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 75vh;
     margin-bottom: 40vh;
@@ -95,19 +100,19 @@ section#ira {
 
 section#ascenso {
     position: relative;
-    background: green url('../imagens/background007.jpg') center center no-repeat fixed;
+    background: lightgreen url('../imagens/background007.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 75vh;
     margin-bottom: 40vh;
 }
 
-article.center-text {
+article.center-text {/* CENTRALIZA VERTICAL */
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.694);
-    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.716);
+    transition: 0.7s;
 }
 
 article.center-text:hover {
@@ -116,21 +121,63 @@ article.center-text:hover {
 }
 
 footer {
-    height: 300px;
+    max-height: 600px;/* PODE TER NO MAXIMO 600PX */
     padding: 30px;
     color: white;
     text-align: center;
+    font-size: 1em;
     font-variant: small-caps;
     background-color: black;
 }
 
 footer p {
+    margin: auto;
     padding-top: 10px;
 }
 
+footer a::after {
+    content: '\00A0\🔗';/* \00A0\ PARA ESPAÇO */
+}
+
+footer a {
+    padding: 10px;
+    color: var(--rosita);
+    text-decoration: none;
+}
+
+footer a:active {
+    color: white !important;/* É A PRIORIDADE / IMPORTANTE */
+}
+
+footer p:hover {
+    font-size: 1.1em;
+    /* QUANDO O MOUSE TIVER EM QUALQUER ELEMENTO P, OS LINKS TERÃO ESTA COR */
+    a{    
+        color: var(--verdito);
+    }
+}
+
+footer a:hover {
+    color: var(--verdito);
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
 footer ul {
+    margin: auto;
+    margin-top: 20px;
     list-style-type: none;
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer ul:hover {
+    font-size: 1.1em;
+    max-width: 380px;
+    /* QUANDO O MOUSE TIVER EM QUALQUER ELEMENTO UL, OS LINKS TERÃO ESTA COR */
+    a {
+        color: var(--verdito);
+    }
 }
 
 footer li {
@@ -141,17 +188,52 @@ footer li a {
     padding: 10px;
 }
 
-footer a {
-    padding: 10px;
-    color: white;
-    text-decoration: none;
+@media (max-width:768px) and (orientation:landscape) {
+/* NA HORINZONTAL DE TABLETS E CELULARES */
+
+    footer p:hover {
+        font-size: 1em;
+    }
+
+    footer a:hover {
+        font-size: 1em;
+    }
+
+    footer ul:hover {
+        font-size: 1em;
+        a {
+            color: var(--rosita);
+        }
+    }
+
+    footer li:hover {
+        a {
+            color: var(--verdito);
+        }
+    }
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
+@media (max-width:768px) {
+/* NA VERTICAL DE TABLETS E CELULARES */
 
-footer a::after {
-    content: '\00A0\🔗';
-}
+    footer p:hover {
+        font-size: 1em;
+    }
 
+    footer a:hover {
+        font-size: 1em;
+    }
+
+    footer ul:hover {
+        font-size: 1em;
+        a {
+            color: var(--rosita);
+        }
+    }
+
+    footer li:hover {
+        a {
+            color: var(--verdito);
+        }
+    }
+}
