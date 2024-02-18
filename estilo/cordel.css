@@ -2,12 +2,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
-@import url('https://fonts.googleapis.com/css2? family= Gochi+Hand & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+
+@font-face {
+    font-family: 'hand';
+    src: url('../fontes/Day\ Light.otf') format(opentype);
+    font-weight: normal;
+    font-size: normal;
+} 
 
 :root {
+    /* FONTES */
     --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte-titulo: 'Passion One', cursive, sans-serif;
-    --fonte-cordel: 'Gochi Hand', cursive, verdana, sans-serif;
+    --fonte-titulo: 'Passion One',"Work Sans", sans-serif;
+    --fonte-cordel: 'hand', arial, sans-serif;
+
+    /* CORES */
+    --rosita: #ff4564;
+    --verdito: #22ff00;
+    --verdito-apagado: #c0ffc9c7;
 }
 
 * {
@@ -39,18 +52,27 @@ header > p {
     padding-bottom: 50px;
 }
 
-header a, footer a {
+a {/* REGRA GERAL PARA TODOS OS LINKS */
+    transition: 0.3s;
+}
+
+header a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
 
-header a:hover, footer a:hover {
+header a:hover {
+    color: var(--verdito);
     text-decoration: underline;
 }
 
+header a:active {
+    color: var(--verdito-apagado);
+}
+
 section {
-    padding-top: 10vh;/* 10% DE TUDO QUE VC VÊ */
+    padding-top: 10vh;/* 10% DE TUDO QUE VC VÊ NA HORIZONTAL */
     padding-bottom: 10vh;
     padding-left: 30px;
     font-family: var(--fonte-cordel);
@@ -60,6 +82,8 @@ section {
 
 section > p {
     padding-bottom: 2em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.1em;
 }
 
 section.normal {
@@ -70,7 +94,6 @@ section.normal {
 section.imagem {
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgb(51, 51, 51);
     color: white;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.471);
 }
@@ -83,12 +106,32 @@ section.imagem > p {
 }
 
 section#img01 {
+ /* ANTES DE CARREGAR A FOTO, SERÁ MOSTRADO A COR AMARELA */
+    background-color: yellow;
+
     background-image: url('../imagens/background001.jpg');
     background-position: right center;
 }
 
 section#img02 {
+    background-color: rgb(224, 204, 178);
     background-image: url('../imagens/background002.jpg');
+}
+
+section#img3 {
+    background-color: gray;
+    background-image: url('../imagens/background008.jpg');
+    background-position: center bottom;
+}
+
+section#img3 p {
+    background-color: rgba(0, 0, 0, 0.803);
+}
+
+section#img4 {
+    background-color: #bca49a;
+    background-image: url('../imagens/background009.jpg');
+    background-position: right center;
 }
 
 footer {
@@ -96,4 +139,32 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
+}
+
+footer p {
+    padding: 20px 0px 20px 0px;
+}
+
+footer a {
+    padding: 30px 60px 30px 60px;
+    font-weight: bolder;
+    color: var(--rosita);
+    text-decoration: overline;
+}
+
+footer a:hover {
+    color: var(--verdito);
+    text-decoration: underline;
+}
+
+footer a:active {
+    color: var(--rosita);
+}
+
+/* CELULARES */
+@media (max-width: 530px) {
+    section {
+        padding: 30px 0px 30px 30px;
+        font-size: 1.2em;
+    }
 }
