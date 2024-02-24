@@ -80,7 +80,7 @@ section a:visited {/* QUANDO JÁ FOI VISITADO */
 
 section#milton {
     position: relative;/* CENTRALIZAÇÃO VERTICAL */
-    background: red url('../imagens/background004.jpg') center center no-repeat fixed;
+    background: red url('../imagens/fundo-index-teclado.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
     margin-bottom: 40vh;/* ESPAÇAMENTO PARA EFEITO PARALLAX */
@@ -88,7 +88,7 @@ section#milton {
 
 section#chico {
     position: relative;
-    background: green url('../imagens/background005.jpg') center center no-repeat fixed;
+    background: green url('../imagens/fundo-index-pernilongo.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
     margin-bottom: 40vh;
@@ -96,7 +96,7 @@ section#chico {
 
 section#ira {
     position: relative;
-    background: brown url('../imagens/background006.jpg') center center no-repeat fixed;
+    background: brown url('../imagens/fundo-index-homem.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
     margin-bottom: 40vh;
@@ -104,7 +104,7 @@ section#ira {
 
 section#ascenso {
     position: relative;
-    background: lightgreen url('../imagens/background007.jpg') center center no-repeat fixed;
+    background: lightgreen url('../imagens/fundo-index-trem.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
     margin-bottom: 40vh;
@@ -143,18 +143,10 @@ footer p {
     padding: 10px;
 }
 
-footer a::after {
-    content: '\00A0\🔗';/* \00A0\ PARA ESPAÇO */
-}
-
 footer a {
     padding: 10px;
     color: var(--rosita);
     text-decoration: none;
-}
-
-footer a:active {
-    color: white !important;/* É A PRIORIDADE / IMPORTANTE */
 }
 
 footer p:hover {
