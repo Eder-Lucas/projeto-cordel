@@ -98,11 +98,15 @@ section.imagem {
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.471);
 }
 
-section.imagem > p {
+section.imagem > p {/* PRIMEIRA CLASS */
     display: inline-block;/* VIRA UM BLOCO ADAPTAVEL */
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.677);
     text-shadow: 1px 1px 0px black;
+}
+
+section.fundoEscuro > p {/* SEGUNDA CLASS */
+    background-color: rgba(0, 0, 0, 0.837);
 }
 
 section#img01 {
@@ -124,14 +128,20 @@ section#img3 {
     background-position: center bottom;
 }
 
-section#img3 p {
-    background-color: rgba(0, 0, 0, 0.803);
-}
-
 section#img4 {
     background-color: #bca49a;
     background-image: url('../imagens/background009.jpg');
     background-position: right center;
+}
+
+section#img5 {
+    background-color: #1e810e;
+    background-image: url('../imagens/background010.jpg');
+}
+
+section#img6 {
+    background-color: red;
+    background-image: url('../imagens/background011.jpg');
 }
 
 footer {
@@ -162,7 +172,7 @@ footer a:active {
 }
 
 /* CELULARES */
-@media (max-width: 530px) {
+@media (max-width: 710px) {
     section {
         padding: 30px 0px 30px 30px;
         font-size: 1.2em;
