@@ -18,8 +18,9 @@
     box-sizing: border-box;
 }
 
-html, body {/* DECLARADO UMA FONTE BASE */
+html, body {/* DECLARADO UMA FONTE E COR BASE */
     font-family: var(--fonte-padrao);
+    background-color: white;
 }
 
 header {
@@ -42,7 +43,7 @@ div#biblioteca h1 {
     text-align: center;
     font-variant: small-caps;
     font-weight: 600;
-    text-shadow: 6px 1px 4px #00000027;
+    text-shadow: 6px 1px 4px #0000001a;
 }
 
 main {
@@ -79,7 +80,7 @@ section a:visited {/* QUANDO JÁ FOI VISITADO */
 }
 
 section#milton {
-    position: relative;/* CENTRALIZAÇÃO VERTICAL */
+    position: relative;/* CENTRALIZAÇÃO VERTICAL DO ARTICLE */
     background: red url('../imagens/fundo-index-teclado.jpg') center center no-repeat fixed;
     background-size: cover;
     height: 60vh;
@@ -110,7 +111,7 @@ section#ascenso {
     margin-bottom: 40vh;
 }
 
-article.center-text {/* CENTRALIZA VERTICAL */
+article.center-text {/* CENTRALIZA VERTICALMENTE */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -125,9 +126,8 @@ article.center-text:hover {
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: flex;/* UM ABAIXO DO OUTRO */
+    flex-direction: column;/* SEMPRE EM COLUNA */
     max-height: 600px;/* PODE TER NO MAXIMO 600PX */
     padding: 30px 0px 30px 0px;
     background-color: black;
@@ -157,7 +157,7 @@ footer p:hover {
     }
 }
 
-footer a:hover {
+footer a:hover {/* SO QUANDO O MOUSE PASSA NO LINK */
     color: var(--verdito);
     font-size: 1.2em;
     text-decoration: underline;
@@ -190,21 +190,21 @@ footer li a {
 /* NA HORINZONTAL DE TABLETS E CELULARES */
 
     footer p:hover {
-        font-size: 1em;
+        font-size: 1em;/* TAMANHO NORMALIZA */
     }
 
     footer a:hover {
-        font-size: 1em;
+        font-size: 1em;/* TAMANHO NORMALIZA */
     }
 
     footer ul:hover {
-        font-size: 1em;
-        a {
+        font-size: 1em;/* TAMANHO NORMALIZA */
+        a {/* FAZ APENAS UM LINK FICAR VERDE, POIS ANTES FOI DEFINIDO QUE TODOS FICARIAM VERDE */
             color: var(--rosita);
         }
     }
 
-    footer li:hover {
+    footer li:hover {/* QUANDO MOUSE PASSAR NAS LISTAS TODO LINK TEM COR ESTA COR */
         a {
             color: var(--verdito);
         }
@@ -246,12 +246,13 @@ footer li a {
 
 /* CONFIGURAÇÃO GERAL DOS CELULARES */
 @media (max-width:536px) {
+
     article.center-text {
-        width: 270px;
+        width: 270px;/* EVITAR QUEBRA DE LINHAS */
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:320px) {/* EVITAR QUEBRA DE LINHA */
     footer {
         font-size: 0.9em;
     }
