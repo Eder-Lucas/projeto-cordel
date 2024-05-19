@@ -115,9 +115,10 @@ article.center-text {/* CENTRALIZA VERTICALMENTE */
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    
     background-color: rgba(0, 0, 0, 0.716);
     transition: 0.7s;
+    transform: translate(-50%, -50%);
 }
 
 article.center-text:hover {
